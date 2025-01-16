@@ -1,0 +1,172 @@
+/* General styles */
+.hidden {
+    display: none;
+}
+body {
+    font-family: 'Menlo', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+nav {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+}
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 0.5em; /* Add spacing between items */
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    text-align: center; /* Ensure alignment for wrapped items */
+}
+.navbar a:hover,
+.navbar a.active {
+    background-color: #575757;
+    text-decoration: none;
+}
+
+/* Section styles */
+section {
+    padding: 2em;
+    text-align: left;
+    display: none;
+}
+section.active {
+    display: block;
+}
+section img {
+    display: block;
+    margin: 0 auto;
+}
+.home-content, .about-content, .projects-content, .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 1em;
+    border-radius: 8px;
+    border: 2px solid lightgrey;
+    text-decoration: none;
+}
+
+/* Buttons */
+.download-resume-button,
+.explore-button {
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    background-color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+.download-resume-button:hover,
+.explore-button:hover {
+    background-color: #575757;
+    text-decoration: none;
+}
+
+/* Projects grid */
+.projects-content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid layout for smaller screens */
+    gap: 1em; /* Adjust spacing between grid items */
+    padding: 1em;
+    max-width: 1200px; /* Optional: limit the width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+.project-box {
+    padding: 1em;
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+        padding: 1em; /* Equal padding on all sides */
+        gap: 0.5em; /* Add spacing between items */
+    }
+    .navbar a {
+        width: calc(100% - 2em); /* Subtract padding from full width */
+        text-align: center; /* Center text within each link */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+    .download-resume-button,
+    .explore-button {
+        font-size: 14px; /* Reduce button size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Add horizontal scrolling for small screens */
+        padding: 1em; /* Ensure consistent padding on smaller screens */
+    }
+    .navbar a {
+        padding: 0.5em; /* Reduce padding for smaller screens */
+        font-size: 12px; /* Adjust font size for readability */
+    }
+}
+
+
+
+/* Remove underline and borders from anchor tags */
+a {
+    text-decoration: none;
+    border: none;
+}
+
+/* Ensure buttons inside anchor tags don't inherit unwanted styles */
+a .explore-button {
+    margin: 0; /* Prevent unintended spacing around buttons */
+    display: inline-block; /* Ensure proper button alignment */
+}
+
+/* Optional: Adjust spacing between buttons */
+a + a {
+    margin-left: 1px; /* Adds spacing between adjacent buttons */
+}
+
+
+/* General spacing for buttons */
+a .explore-button {
+    margin: 1px 0; /* Add vertical margin (top and bottom) */
+    display: block; /* Ensure buttons stack vertically in responsive layouts */
+}
+
+/* Additional spacing between adjacent anchor tags */
+a + a {
+    margin-top: 1px; /* Space between buttons when stacked */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    a .explore-button {
+        margin: 2px 0; /* Increase vertical spacing for smaller screens */
+    }
+}
+
+
+
+
+

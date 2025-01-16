@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#" data-section="home" class="active">Home</a>
+            <a href="#" data-section="about">About Me</a>
+            <a href="#" data-section="projects">Projects</a>
+            <a href="#" data-section="contact">Contact</a>
+        </div>
+    </nav>
+    <section id="home" class="active">
+        <div class="home-content">
+            <br>
+            <img src="{{ url_for('static', filename='images/profile_pic.png') }}" alt="this is me" width="225" height="200">
+            <h2 id="streaming-text0" class="hidden"></h2>
+            <p id="streaming-text1" class="hidden"></p>
+            <p id="streaming-text2" class="hidden"></p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-content">
+            <br>
+            <img src="{{ url_for('static', filename='images/profile_pic.png') }}" alt="this is me" width="225" height="200">
+            <h2>About Me</h2>
+            <p>Hi, I'm Noah, a Full Stack Developer with a passion for A.I, Game Design and Computer Science Education</p>
+            <a href="{{ url_for('static', filename='download/NoahJonesResume2024.pdf') }}" download>
+                <button class="download-resume-button">Download Resume</button>
+            </a>
+        </div>
+    </section>
+    <section id="projects">
+
+        <div class="projects-content">
+            <br>
+            <img src="{{ url_for('static', filename='images/profile_pic.png') }}" alt="this is me" width="225" height="200">
+            <h2>Projects</h2>
+            <p>Below are some of my personal projects</p>
+        </div>
+
+        <div class="projects-content-container">
+
+            <div class="project-box">
+                <br>
+                <h3>Custom Navigation Agent</h3>
+                <p>Language: C#</p>
+                <p>Platform: Unity 6 (6000.0.30f1)</p>
+                <p>Description: An Agent that implements optimized pathfinding to navigate 3D environments. No Unity A.I. assets or libraries are used, i.e. NavMeshAgents are not used.  Custom code uses Threading to execute pathfinding tasks in the background and not disrupt the main thread.  The agent is fully independent from the pathfinding algorithm itself and can navigate with or without pathfinding enabled.  The agent can use basic heuristics and raycast based obstacle detection to avoid objects and respond dynamically to obstructions that are not specified as part of the game grid</p>
+                <a href="/NoahsNavWeb">
+                    <button class="explore-button">Run Demo</button>
+                </a>
+                <a href="{{ url_for('static', filename='download/NoahsNav.unitypackage') }}" download>
+                    <button class="explore-button">Download Unity Package</button>
+                </a>
+                <a href="https://github.com/jonesnoah45010/NoahsNav" target="_blank">
+                    <button class="explore-button">View On GitHub</button>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <br>
+                <h3>Local SQL Database Manager</h3>
+                <p>Language: Python</p>
+                <p>Platform: Windows, Mac or Linux</p>
+                <p>Description: A wrapper class for the sqlite3 module to make it more friendly to beginner Python devs. Acts as a great Python tool for quickly setting up local SQL databases on the fly. Is a great educational tool for learning about SQL queries and database strucutures, while keeping things clean and readable using Python.</p>
+                <a href="https://github.com/jonesnoah45010/local_sql_db" target="_blank">
+                    <button class="explore-button">View On GitHub</button>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <br>
+                <h3>Local Semantic Database Manager</h3>
+                <p>Language: Python</p>
+                <p>Platform: Windows, Mac or Linux</p>
+                <p>Description:  A wrapper class for the chromadb module, with additional supporting data parsing tools, to make it more friendly to beginner Python devs. Acts as Python tool for easily managing data and executing semantic queries locally. Great for experimenting with building retrieval-augmented generation (RAG) systems. </p>
+                <a href="https://github.com/jonesnoah45010/local_semantic_db" target="_blank">
+                    <button class="explore-button">View On GitHub</button>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <br>
+                <h3>LLM ChatAgent</h3>
+                <p>Language: Python</p>
+                <p>Platform: Windows, Mac or Linux</p>
+                <p>Description:  Basic Python object that can manage a conversation using the ChatGPT API. Retains the context of the current conversation and automatically tracks the LLM token limit per transaction and refreshes the conversation context upon the token limit being reached. Includes tools for adding in new context/system prompts to the conversation dynamically. </p>
+                <a href="https://github.com/jonesnoah45010/ChatAgent" target="_blank">
+                    <button class="explore-button">View On GitHub</button>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <br>
+                <h3>LLM ChatAgent With RAG</h3>
+                <p>Language: Python</p>
+                <p>Platform: Windows, Mac or Linux</p>
+                <p>Description: This is a combination of my LLM ChatAgent, Local Semantic Database Manager, and Local SQL Database Manager code bases to create a retrieval-augmented generation (RAG) ready chat agent.</p>
+                <a href="https://github.com/jonesnoah45010/RagAgent" target="_blank">
+                    <button class="explore-button">View On GitHub</button>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="contact">
+        <div class="contact-content">
+            <br>
+            <img src="{{ url_for('static', filename='images/profile_pic.png') }}" alt="this is me" width="225" height="200">
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:jonesnoah45010@gmail.com">jonesnoah45010@gmail.com</a>.</p>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

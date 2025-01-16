@@ -1,0 +1,127 @@
+body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: 'Arial', sans-serif;
+      }
+
+#unity-container {
+    margin-top: 50px; /* Add space above the container */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 960px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+canvas {
+    width: 100%;
+    max-width: 960px;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 600px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+#unity-footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+#description {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 200px; /* Limit height for mobile */
+}
+
+#unity-footer div {
+    margin: 5px 0;
+}
+
+a {
+    color: #76c7c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    background-color: black;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Menlo', monospace;
+    z-index: 9999; /* Ensure it stays above other elements */
+}
+
+.back-button:hover {
+    background-color: #575757;
+    text-decoration: none;
+}
+
+#unity-fullscreen-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    canvas {
+      width: 90%;
+      max-height: none; /* Remove height limit for very small screens */
+    }
+
+    #description {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .back-button {
+       font-size: 14px;
+       top: 5px;
+       left: 5px;
+    }
+}
+
+
+
+
+
+
+

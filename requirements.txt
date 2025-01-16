@@ -1,0 +1,13 @@
+requests
+Flask
+Werkzeug
+cryptography
+Flask-JWT-Extended
+PyJWT
+python-dotenv
+mysql-connector-python
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+bcrypt
